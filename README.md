@@ -62,7 +62,6 @@ Mobile & full-stack development · Scalable architecture · Secure design · Per
 <br/>
 
 <img src="https://github-readme-stats.vercel.app/api?username=Swasthiknrao&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117" height="165"/>
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Swasthiknrao&theme=tokyonight&hide_border=true&background=0d1117" height="165"/>
 
 <br/>
 
@@ -76,6 +75,6 @@ Mobile & full-stack development · Scalable architecture · Secure design · Per
 <br/>
 <br/>
 
-![Profile Views](https://visitcount.itsvg.in/api?id=Swasthiknrao&icon=2&color=6&label=Profile%20Views)
+![Profile Views](https://komarev.com/ghpvc/?username=swasthiknrao&style=flat-square&color=58a6ff)
 
 </div>
