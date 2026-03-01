@@ -6,7 +6,7 @@
 
 <br/>
 
-### Building production-ready mobile & full-stack apps · AI-driven features · Startup MVPs
+### Building production-ready mobile & full-stack apps · AI-driven features ·
 
 <br/>
 
