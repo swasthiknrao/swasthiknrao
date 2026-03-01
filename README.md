@@ -62,10 +62,6 @@ Mobile & full-stack development · Scalable architecture · Secure design · Per
 
 <br/>
 
-<img src="https://github-readme-stats.vercel.app/api?username=Swasthiknrao&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117" height="165"/>
-
-<br/>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Swasthiknrao&theme=tokyonight&hide_border=true&layout=compact&bg_color=0d1117" />
+*"Mathematicians stand on each others' shoulders and computer scientists stand on each others' toes."*
 
 </div>
