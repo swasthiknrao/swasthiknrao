@@ -67,24 +67,65 @@ async function fetchActivity(username) {
   document.getElementById('streakCount').textContent = '...';
 
   try {
-    const res = await fetch(`${GITHUB_API}/users/${username}/events/public?per_page=100`);
-    if (!res.ok) throw new Error('User not found');
+    const to = new Date();
+    const from = new Date(to);
+    from.setFullYear(from.getFullYear() - 1);
 
-    const events = await res.json();
-    const contribTypes = ['PushEvent', 'IssuesEvent', 'PullRequestEvent', 'CreateEvent', 'DeleteEvent'];
-    const contribDates = events
-      .filter((e) => contribTypes.includes(e.type))
-      .map((e) => e.created_at.slice(0, 10));
+    const query = `
+      query($username: String!, $from: DateTime!, $to: DateTime!) {
+        user(login: $username) {
+          contributionsCollection(from: $from, to: $to) {
+            contributionCalendar {
+              totalContributions
+              weeks {
+                contributionDays {
+                  date
+                  contributionCount
+                }
+              }
+            }
+          }
+        }
+      }
+    `;
 
-    const now = new Date();
-    const todayStr = now.toISOString().slice(0, 10);
-    const weekAgo = new Date(now);
+    const res = await fetch('https://api.github.com/graphql', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        query,
+        variables: {
+          username,
+          from: from.toISOString(),
+          to: to.toISOString(),
+        },
+      }),
+    });
+
+    const json = await res.json();
+    if (json.errors || !json.data?.user) throw new Error('User not found');
+
+    const weeks = json.data.user.contributionsCollection.contributionCalendar.weeks;
+    const contribDates = [];
+    let totalContrib = 0;
+    for (const week of weeks) {
+      for (const day of week.contributionDays) {
+        totalContrib += day.contributionCount;
+        if (day.contributionCount > 0) contribDates.push(day.date);
+      }
+    }
+
+    const todayStr = to.toISOString().slice(0, 10);
+    const todayContrib = weeks.flatMap((w) => w.contributionDays).find((d) => d.date === todayStr)?.contributionCount ?? 0;
+    const weekAgo = new Date(to);
     weekAgo.setDate(weekAgo.getDate() - 7);
-    const weekEvents = events.filter((e) => new Date(e.created_at) >= weekAgo);
-    const todayContrib = contribDates.filter((d) => d === todayStr).length;
+    const weekContrib = weeks.flatMap((w) => w.contributionDays)
+      .filter((d) => d.date >= weekAgo.toISOString().slice(0, 10))
+      .reduce((s, d) => s + d.contributionCount, 0);
+
     const streak = calcStreak(contribDates);
 
-    document.getElementById('eventCount').textContent = weekEvents.length;
+    document.getElementById('eventCount').textContent = weekContrib;
     document.getElementById('todayContrib').textContent = todayContrib;
     document.getElementById('streakCount').textContent = streak || '0';
     document.getElementById('streakCount').className = `stat-value ${streak > 0 ? 'on-fire' : ''}`;
