@@ -10,9 +10,10 @@
 
 <br/>
 
+[![Portfolio](https://img.shields.io/badge/Portfolio-nraokshatriya.web.app-00C7B7?style=for-the-badge&logo=firefox&logoColor=white)](https://nraokshatriya.web.app)
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/kshatriya.n.rao)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/swasthik-n-rao)
 [![Email](https://img.shields.io/badge/Email-nraoswasthik2004%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nraoswasthik2004@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/swasthik-n-rao)
 
 <br/>
 <br/>
@@ -25,14 +26,14 @@
 <tr>
 <td width="50%">
 
-### <img src="https://img.icons8.com/fluency/24/000000/developer.png" width="22"/> Focus
+### 📌 Focus
 
 Mobile & full-stack development · Scalable architecture · Secure design · Performance-first solutions · AI integration
 
 </td>
 <td width="50%">
 
-### <img src="https://img.icons8.com/fluency/24/000000/laptop.png" width="22"/> Stack
+### 💻 Stack
 
 `Flutter` `React` `TypeScript` `Django` `Firebase` `PostgreSQL` `TensorFlow` `Python`
 
@@ -71,10 +72,5 @@ Mobile & full-stack development · Scalable architecture · Secure design · Per
 <br/>
 
 <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
-
-<br/>
-<br/>
-
-![Profile Views](https://komarev.com/ghpvc/?username=swasthiknrao&style=flat-square&color=58a6ff)
 
 </div>
