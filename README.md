@@ -14,7 +14,7 @@ I build production-ready mobile and full-stack applications focused on real-worl
 
 
 
-### ✍️ Random Dev Quote
+### ✍️  Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
 ---
