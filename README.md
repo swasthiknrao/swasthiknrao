@@ -68,9 +68,4 @@ Mobile & full-stack development · Scalable architecture · Secure design · Per
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Swasthiknrao&theme=tokyonight&hide_border=true&layout=compact&bg_color=0d1117" />
 
-<br/>
-<br/>
-
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
-
 </div>
