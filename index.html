@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Streak Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔥 GitHub Streak Helper</h1>
+      <p>Build your contribution streak one day at a time</p>
+    </header>
+
+    <section class="input-section">
+      <label for="username">Your GitHub username</label>
+      <div class="input-group">
+        <input type="text" id="username" placeholder="swasthiknrao" value="swasthiknrao">
+        <button id="fetchBtn">Check Activity</button>
+      </div>
+    </section>
+
+    <section class="stats-section" id="statsSection">
+      <div class="stat-card streak highlight">
+        <span class="stat-value" id="streakCount">—</span>
+        <span class="stat-label">Current streak (days)</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="eventCount">—</span>
+        <span class="stat-label">Recent activity (7 days)</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="todayContrib">—</span>
+        <span class="stat-label">Today's contributions</span>
+      </div>
+    </section>
+
+    <section class="reminder-section">
+      <h2>📅 Daily reminder</h2>
+      <p id="reminderText">Set a reminder to commit today!</p>
+      <button id="dismissBtn" class="secondary">Dismiss for today</button>
+    </section>
+
+    <section class="streak-viz" id="streakViz">
+      <h2>📊 This week</h2>
+      <div class="week-dots" id="weekDots"></div>
+    </section>
+
+    <section class="tips-section">
+      <h2>💡 Keep your streak alive</h2>
+      <ul>
+        <li>Commit to <code>streak-log.md</code> daily (even a small update counts)</li>
+        <li>Fix typos, add docs, or update README</li>
+        <li>Create issues or PRs on any repo</li>
+        <li>Push code changes before midnight (your timezone)</li>
+      </ul>
+    </section>
+
+    <section class="action-section">
+      <a href="streak-log.md" class="btn-primary">✏️ Update streak log</a>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
